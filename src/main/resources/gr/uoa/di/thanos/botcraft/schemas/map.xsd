@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.di.uoa.gr/~thanos/botcraft/game/map/" elementFormDefault="qualified" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema http://www.w3.org/2009/XMLSchema/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:map="http://www.di.uoa.gr/~thanos/botcraft/game/map/">
+	<xs:element name="map" type="map:map" />
+	<xs:complexType name="map">
+		<xs:sequence>
+			<xs:element name="latitudinalSize" type="xs:unsignedShort" />
+			<xs:element name="longitudinalSize" type="xs:unsignedShort" />
+			<xs:element name="tile" type="map:tile" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tile">
+		<xs:attribute name="altitude" type="xs:float" />
+		<xs:attribute name="terrain" type="map:terrain" />
+	</xs:complexType>
+	<xs:simpleType name="terrain">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="dirt"/>
+			<xs:enumeration value="grass"/>
+			<xs:enumeration value="ice"/>
+			<xs:enumeration value="lava"/>
+			<xs:enumeration value="mud"/>
+			<xs:enumeration value="rock"/>
+			<xs:enumeration value="sand"/>
+			<xs:enumeration value="water"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

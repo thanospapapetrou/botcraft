@@ -1,0 +1,7 @@
+create GLProfile for specific AWT screen (GraphicsDevice)
+set default locale as early as possible to compensate for awt default strings (what to do on restart)?
+deserialize map altitudes directly to float buffer
+screen, display mode, full screen, pause only in game
+GLSL and CL utils with definitions for each program
+units
+
